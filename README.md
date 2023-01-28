@@ -1,5 +1,18 @@
 # Circle-Backend
-This is the backend repo of a social networking site named CIRCLE, built using NodeJs, ExpressJs and MongoDB.
+
+```
+CIRCLE is an application that is built using Node.js, Express, and MongoDB. It is designed to provide users with an easy and intuitive platform to connect with others and share their thoughts and ideas.
+
+Users of the Circle app will be able to register themselves by providing their basic information, such as their name, email address, and password. Once registered, they can log in to their account and start using the app's features. One of the main features of the Circle app is the ability to create posts. Users can write and share their thoughts, ideas, or any other content they want to share with their friends and followers. They can also like posts, either from their friends or from other users they follow.
+
+Additionally, the Circle app allows users to add and remove friends, which enables them to connect with others and build their social circle. They can also view other users' profiles and posts, and interact with them. All these features are available only after the user has been authenticated, which ensures the security and privacy of the users' information.
+
+In summary, the Circle app is a social platform that enables users to connect with others, share their thoughts and ideas, and build their social circle. It provides a user-friendly interface and various features to make the user experience more enjoyable, and at the same time, it takes security and privacy seriously by implementing authentication and authorization measures.
+```
+
+
+
+
 
 # API ROUTES
 
