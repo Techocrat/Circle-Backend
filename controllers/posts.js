@@ -1,10 +1,13 @@
 import Post from "../models/Post.js";
 import User from "../models/User.js";
+import jwt  from "jsonwebtoken";
 
 /* CREATE */
 export const createPost = async (req, res) => {
   try {
-    const { userId, description } = req.body;
+    const { userId } = req.params;
+    const { description } = req.body;
+    console.log(req.body);
     const user = await User.findById(userId);
     const newPost = new Post({
       userId,
@@ -48,7 +51,7 @@ export const getUserPosts = async (req, res) => {
 export const likePost = async (req, res) => {
   try {
     const { id } = req.params;
-    const { userId } = req.body;
+    const  userId  = req.user.id;
     const post = await Post.findById(id);
     const isLiked = post.likes.get(userId);
 
@@ -66,6 +69,6 @@ export const likePost = async (req, res) => {
 
     res.status(200).json(updatedPost);
   } catch (err) {
-    res.status(404).json({ message: err.message });
+    res.status(404).json({ message: err });
   }
 };

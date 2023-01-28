@@ -15,7 +15,9 @@ const postSchema = mongoose.Schema(
       required: true,
     },
     location: String,
-    description: String,
+    description: {
+      type: String,
+    },
     likes: {
       type: Map,
       of: Boolean,
